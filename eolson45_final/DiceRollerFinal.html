@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dice Roller</title>
+  </head>
+  <body>
+    <script>
+      function roll(){
+        var d1=Math.floor(Math.random()*6+1);
+        var d2=Math.floor(Math.random()*6+1);
+        var d3=Math.floor(Math.random()*6+1);
+        var d4=Math.floor(Math.random()*6+1);
+        var d5=Math.floor(Math.random()*6+1);
+        var d6=Math.floor(Math.random()*6+1);
+
+        var p1=document.getElementById('p1');
+        var p2=document.getElementById('p2');
+        var p3=document.getElementById('p3');
+
+        p1.innerHTML="1d6: "+d1;
+        p2.innerHTML="2d6: "+d2+" + "+d3;
+        p3.innerHTML="3d6: "+d4+" + "+d5+" + "+d6;
+        }    
+    </script>
+
+    <form><input type="button" onclick="javascript:roll();" value="Click to Start"></form>
+    <p id="p1">1d6:</p>
+    <p id="p2">2d6:</p>
+    <p id="p3">3d6:</p></body>
+</body>
+
+</html>
